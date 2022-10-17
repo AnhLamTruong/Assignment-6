@@ -1,0 +1,15 @@
+###ConnectingCities
+We have to connect all the cities by path which will cost us least. The way to do that is to find out the Minimum Spanning Tree(MST) of the map of the cities(i.e. each city is a node of the graph and all the damaged roads between cities are edges). And the total cost is the addition of the path edge values in the Minimum Spanning Tree.
+				Time Complexity: O(n^2) Each node is traversed at most once.
+
+####LongestCycleInPath
+DFS:Recursively keep visiting the nodes and checking if this is the end
+	  Time Complexity: O(n) Each node is traversed at most once.
+	  SC: O(n) for recursion stack
+
+####PathExistInGraph
+Do a simple dfs in all point, maintaining a preorder of every node.
+if the preorder number of any next node is greater then the preorder of the begining of the dfs, then there must be a cycle and ans = max(ans, current cycle)
+
+		Time Complexity: O(n) Each node is traversed at most once.
+		SC: O(n) for recursion stack
